@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CanvasManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PointSystem.cs" />
+    <Compile Include="Assets\Scripts\PointUI.cs" />
     <Compile Include="Assets\Scripts\Roach.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Testie.cs" />

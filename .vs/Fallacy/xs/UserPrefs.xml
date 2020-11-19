@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{A95D8AF2-6BB9-C480-7710-0597BD446E94}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PointSystem.cs">
     <Files>
-      <File FileName="Assets/Scripts/Testie.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Roach.cs" />
       <File FileName="Assets/Scripts/CanvasManager.cs" />
       <File FileName="Assets/Scripts/SceneManager.cs" />
-      <File FileName="Assets/Scripts/PointSystem.cs" Line="65" Column="17" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="19" Column="13" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="22" Column="10" />
+      <File FileName="Assets/Scripts/PointSystem.cs" Line="32" Column="10" />
+      <File FileName="Assets/Scripts/PointUI.cs" Line="23" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +18,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f3dc02e1-228d-45cf-a7ea-1b4f347f0f86" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="45988d93-4d1b-4523-92a3-087f88ab0faf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

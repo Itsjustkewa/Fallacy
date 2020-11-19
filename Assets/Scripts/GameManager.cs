@@ -9,6 +9,8 @@ namespace Foolacy.Main
     {
         public static GameManager instance;
 
+        
+
         public PointSystem Complete;
 
         private void Awake()
@@ -21,7 +23,7 @@ namespace Foolacy.Main
 
         public void IsComplete()
         {
-            Complete.Reached();
+            Complete.PointChecker();
         }
 
     }

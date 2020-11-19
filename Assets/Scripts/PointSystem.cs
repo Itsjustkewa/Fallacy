@@ -7,23 +7,33 @@ namespace Foolacy.Main
 { 
     public class PointSystem : MonoBehaviour
     {
-        public int Points = 0 ;
+        [SerializeField] private PointUI pointBar;
+
+        public int Points;
         public int Revcieved;
         private int Target = 10;
         public bool HasReached;
 
+        public float coin;
+        public float check;
+      
+
         // Start is called before the first frame update
         void Start()
         {
-           Revcieved = Points;
+            Revcieved = Points;
+            pointBar.SetSize(coin);
+            coin = Revcieved;
+            
         }
 
         // Update is called once per frame
         void Update()
         {
             Revcieved = Points;
-            PointChecker();
-
+            coin = Revcieved;
+            pointBar.SetSize(check);
+            
         }
 
         public void AddPoints(int plus)
@@ -46,11 +56,7 @@ namespace Foolacy.Main
                 Debug.Log("win");
                 HasReached = true;
             }
-            return;
-            //else
-            //{
-            //    Debug.Log("keep trying");
-            //}
+
         }
 
         public void PointChecker()
@@ -59,12 +65,25 @@ namespace Foolacy.Main
             {
                 Points = 0;
             }
-            if(Revcieved >= 10)
+            if(Revcieved == 10)
             {
                 Revcieved = 10;
-                
+                Reached();
             }
-            //Reached();
+            Thinking();
+        }
+
+        public void Thinking()
+        {
+            if(Revcieved <= 0.1)
+            {
+                //check = coin;
+            }
+            else
+            {
+                 check = (coin / 10.0f);
+
+            }
         }
     }
 }
