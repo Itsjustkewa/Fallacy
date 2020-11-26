@@ -22,8 +22,8 @@ namespace Foolacy.Main
         void Start()
         {
             Revcieved = Points;
+            //coin = Revcieved;
             pointBar.SetSize(coin);
-            coin = Revcieved;
             
         }
 
@@ -32,6 +32,7 @@ namespace Foolacy.Main
         {
             Revcieved = Points;
             coin = Revcieved;
+            PointChecker();
             pointBar.SetSize(check);
             
         }
@@ -47,6 +48,7 @@ namespace Foolacy.Main
         {
             minus =  Points--;
             Revcieved = minus;
+            
         }
 
         public void Reached()
@@ -61,13 +63,15 @@ namespace Foolacy.Main
 
         public void PointChecker()
         {
-            if(Points <= 0)
+            if (Points <= 0)
             {
                 Points = 0;
             }
-            if(Revcieved == 10)
+            if (Revcieved == 10)
             {
-                Revcieved = 10;
+                Points = 10;
+               
+               
                 Reached();
             }
             Thinking();
@@ -75,15 +79,7 @@ namespace Foolacy.Main
 
         public void Thinking()
         {
-            if(Revcieved <= 0.1)
-            {
-                //check = coin;
-            }
-            else
-            {
-                 check = (coin / 10.0f);
-
-            }
+            check = (coin / 10.0f);
         }
     }
 }
