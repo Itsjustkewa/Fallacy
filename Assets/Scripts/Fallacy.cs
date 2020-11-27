@@ -7,8 +7,9 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Fallacy 
 {
-    public string FallacyType;
-    public Text QestionsBox;
+    public string FallacyType; //text
+    public bool isCorrect;
+    //public Text QestionsBox;
     
 
 }

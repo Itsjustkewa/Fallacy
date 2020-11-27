@@ -28,6 +28,15 @@ namespace Foolacy.Main
             Application.LoadLevel(1);
         }
 
+        public void NextQuestion()
+        {
+            Application.LoadLevel(2);
+        }
+
+        public void StartQuestion()
+        {
+            Application.LoadLevel(2);
+        }
 
 
         

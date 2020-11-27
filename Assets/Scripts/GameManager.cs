@@ -16,7 +16,14 @@ namespace Foolacy.Main
         private void Awake()
         {
             if (instance == null)
+            {
                 instance = this;
+            }
+            else
+            {
+                Destroy(this);
+                return;
+            }
 
             DontDestroyOnLoad(this);
         }

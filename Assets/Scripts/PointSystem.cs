@@ -9,12 +9,14 @@ namespace Foolacy.Main
     {
         [SerializeField] private PointUI pointBar;
 
+        public static PointSystem instance;
+
         public int Points;
         public int Revcieved;
         private int Target = 10;
         public bool HasReached;
 
-        public float coin;
+        private float coin;
         public float check;
       
 
@@ -24,7 +26,7 @@ namespace Foolacy.Main
             Revcieved = Points;
             //coin = Revcieved;
             pointBar.SetSize(coin);
-            
+
         }
 
         // Update is called once per frame
@@ -55,8 +57,9 @@ namespace Foolacy.Main
         {
             if(Revcieved == Target)
             {
-                Debug.Log("win");
+                
                 HasReached = true;
+                
             }
 
         }
@@ -67,11 +70,9 @@ namespace Foolacy.Main
             {
                 Points = 0;
             }
-            if (Revcieved == 10)
+            if (10 <= Revcieved)
             {
                 Points = 10;
-               
-               
                 Reached();
             }
             Thinking();
