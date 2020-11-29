@@ -294,7 +294,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 738275353}
-        m_MethodName: Checks
+        m_MethodName: PointCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -877,6 +877,7 @@ MonoBehaviour:
   checkPoint: 0
   pointUI: 0
   collect: 0
+  gotten: 
   Complete: {fileID: 738275354}
 --- !u!114 &738275354
 MonoBehaviour:
@@ -1622,7 +1623,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 738275353}
-        m_MethodName: Checks
+        m_MethodName: PointCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

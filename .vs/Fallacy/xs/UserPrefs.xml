@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{A95D8AF2-6BB9-C480-7710-0597BD446E94}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PointSystem.cs">
     <Files>
-      <File FileName="Assets/Scripts/PointUI.cs" Line="20" Column="14" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="50" Column="15" />
-      <File FileName="Assets/Scripts/Roach.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/Roach.cs" Line="22" Column="10" />
+      <File FileName="Assets/Scripts/PointUI.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="47" Column="13" />
+      <File FileName="Assets/Scripts/FallacyHandler.cs" Line="63" Column="13" />
+      <File FileName="Assets/Scripts/PointSystem.cs" Line="48" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +13,7 @@
           <Node name="Fallacy" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
+                <Node name="PointSystem.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ac3e2db9-3f28-4d4e-be44-80ab4cf8ef9e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="447371e3-4276-4fc5-8840-67522ef03190" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

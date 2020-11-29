@@ -38,7 +38,7 @@ namespace Foolacy.Main
         void Start()
         {
             Revcieved = Points;
-            //coin = Revcieved;
+            coin = Revcieved;
             pointBar.SetSize(coin);
 
         }
@@ -49,7 +49,7 @@ namespace Foolacy.Main
             Revcieved = Points;
             coin = Revcieved;
             PointChecker();
-            //pointBar.SetSize(check);
+            pointBar.SetSize(check);
             
         }
 

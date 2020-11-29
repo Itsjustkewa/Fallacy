@@ -13,6 +13,9 @@ namespace Foolacy.Main
         public int checkPoint;
         public int pointUI;
         public int collect;
+
+        public List<int> gotten;
+
         //public Roach QuestionCanvas;
 
         public PointSystem Complete;
@@ -41,15 +44,16 @@ namespace Foolacy.Main
         private void Update()
         {
             recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
-            Checks();
+            
            
         }
 
-        public void Checks()
+        public void PointCheck()
         {
-            //collect = recieved;
-            //pointUI = collect + recieved;
-            
+            gotten.Add(recieved);
+            collect = recieved;
         }
+
+        
     }
 }
