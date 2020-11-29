@@ -9,7 +9,11 @@ namespace Foolacy.Main
     {
         public static GameManager instance;
 
-        
+        public int recieved;
+        public int checkPoint;
+        public int pointUI;
+        public int collect;
+        //public Roach QuestionCanvas;
 
         public PointSystem Complete;
 
@@ -26,6 +30,7 @@ namespace Foolacy.Main
             }
 
             DontDestroyOnLoad(this);
+
         }
 
         public void IsComplete()
@@ -33,5 +38,18 @@ namespace Foolacy.Main
             Complete.PointChecker();
         }
 
+        private void Update()
+        {
+            recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
+            Checks();
+           
+        }
+
+        public void Checks()
+        {
+            //collect = recieved;
+            //pointUI = collect + recieved;
+            
+        }
     }
 }

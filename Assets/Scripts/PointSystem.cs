@@ -18,7 +18,21 @@ namespace Foolacy.Main
 
         private float coin;
         public float check;
-      
+
+
+        private void Awake()
+        {
+            if(instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(this);
+                return;
+            }
+            DontDestroyOnLoad(this);
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -35,7 +49,7 @@ namespace Foolacy.Main
             Revcieved = Points;
             coin = Revcieved;
             PointChecker();
-            pointBar.SetSize(check);
+            //pointBar.SetSize(check);
             
         }
 
@@ -81,6 +95,11 @@ namespace Foolacy.Main
         public void Thinking()
         {
             check = (coin / 10.0f);
+        }
+
+        public void SavePoints()
+        {
+            PointSystem.instance.Revcieved = Revcieved;
         }
     }
 }

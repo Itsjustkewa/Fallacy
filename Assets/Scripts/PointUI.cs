@@ -14,14 +14,6 @@ namespace Foolacy.Main
 
         public void Awake()
         {
-            bar = transform.Find("Bar");
-            
-        }
-        // Start is called before the first frame update
-        public void Start()
-        {
-
-
             if(instance == null)
             {
                 instance = this;
@@ -33,6 +25,15 @@ namespace Foolacy.Main
             }
 
             DontDestroyOnLoad(this);
+
+            bar = transform.Find("Bar");
+            
+        }
+        // Start is called before the first frame update
+        public void Start()
+        {
+
+
 
         }
 

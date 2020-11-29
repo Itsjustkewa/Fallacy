@@ -9,6 +9,7 @@ namespace Foolacy.Main
     public class SceneManager : MonoBehaviour
     {
         public static SceneManager instance; 
+
         private int SceneToLoad;
 
         // Start is called before the first frame update
@@ -36,6 +37,7 @@ namespace Foolacy.Main
         public void StartQuestion()
         {
             Application.LoadLevel(2);
+            
         }
 
 

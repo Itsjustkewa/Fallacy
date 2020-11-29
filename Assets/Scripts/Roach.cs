@@ -5,39 +5,28 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
-public class Roach : MonoBehaviour, IPointerDownHandler
-{
-
-    public GameObject Butt;
-    
-
-    // Start is called before the first frame update
-    void Awake()
+namespace Foolacy.Main
+{ 
+    public class Roach : MonoBehaviour
     {
-       
+        public int recievedPoint;
+        public int currentPoint;
+        public int defaultPoint;
+
+        private void Start()
+        {
+            recievedPoint = PointSystem.instance.Revcieved;
+        }
+
+        private void Update()
+        {
+            Updater();
+        }
+
+
+        public void Updater()
+        {
+            currentPoint = recievedPoint;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Rubie();
-    }
-
-    public void Rubie()
-    {
-        
-        
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-            if(Butt = this.gameObject)
-            {
-                Debug.Log("Here We Go");
-            }
-
-    }
-
-   
 }
