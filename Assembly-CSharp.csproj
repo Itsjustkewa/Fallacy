@@ -71,7 +71,7 @@
     <Compile Include="Assets\Scripts\PointSystem.cs" />
     <Compile Include="Assets\Scripts\PointUI.cs" />
     <Compile Include="Assets\Scripts\Roach.cs" />
-    <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\SceneManagerScript.cs" />
     <Compile Include="Assets\Scripts\Testie.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

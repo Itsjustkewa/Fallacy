@@ -14,7 +14,8 @@ namespace Foolacy.Main
 
         [Header("Fallacies")]
         public Fallacy[] fallacyQuestions; //Creating an arrry
-        private static List<Fallacy> unansweredFacllay;
+        private List<Fallacy> unansweredFacllay;
+        private List<Fallacy> Bin = new List<Fallacy>();
 
         private Fallacy currenctFact;
 
@@ -23,7 +24,7 @@ namespace Foolacy.Main
         private PointSystem marks;
 
         [SerializeField]
-        private SceneManager sceneManager;
+        private SceneManagerScript sceneManager;
 
         private int Points;
         
@@ -45,7 +46,15 @@ namespace Foolacy.Main
         }
 
         void SetFallacyQuestion()
-        {
+        {   
+            if(unansweredFacllay.Count <= 0)
+            {
+                foreach(Fallacy f in Bin)
+                {
+                    unansweredFacllay.Add(f);
+                }
+                Bin.Clear();
+            }
             int randomFallacyIndex = Random.Range(0, unansweredFacllay.Count);
             currenctFact = unansweredFacllay[randomFallacyIndex];
 
@@ -56,10 +65,12 @@ namespace Foolacy.Main
         IEnumerator NextQuestion()
         {
             unansweredFacllay.Remove(currenctFact);
+            Bin.Add(currenctFact);
 
             yield return new WaitForSeconds(breathTime);
 
-            sceneManager.NextQuestion();
+            
+            SetFallacyQuestion();
             
         }
 
@@ -78,6 +89,7 @@ namespace Foolacy.Main
 
             StartCoroutine(NextQuestion());
         }
+
         public void IsntTrue()
         {
             if (!currenctFact.isCorrect)
