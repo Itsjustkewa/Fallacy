@@ -9,16 +9,14 @@ namespace Foolacy.Main
     {
         public static GameManager instance;
 
-        public int recieved;
-        public int checkPoint;
-        public int pointUI;
-        public int collect;
+        [HideInInspector]public int recieved;
+        [HideInInspector]public int collect;
 
-        public List<int> gotten;
+        public GameObject PointCanvas;
 
         //public Roach QuestionCanvas;
 
-        public PointSystem Complete;
+        public PointSystem pointSystem;
 
         private void Awake()
         {
@@ -34,26 +32,54 @@ namespace Foolacy.Main
 
             DontDestroyOnLoad(this);
 
+            PointCanvas = GameObject.FindGameObjectWithTag("UI_Hud");
+
         }
 
         public void IsComplete()
         {
-            Complete.PointChecker();
+            pointSystem.PointChecker();
         }
 
         private void Update()
         {
-            recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
-            
-           
+            Trig();
+
         }
 
         public void PointCheck()
         {
-            gotten.Add(recieved);
+            //gotten.Add(recieved);
+            recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
             collect = recieved;
         }
 
+        public void BackToMain()
+        {
+            pointSystem.Reset();
+            if (PointCanvas.activeSelf)
+            {
+                PointCanvas.SetActive(false);
+
+            }
+
+        }
+        public void BacktoGame()
+        {
+            if (!PointCanvas.activeSelf)
+            {
+                PointCanvas.SetActive(true);
+                return;
+            }
+        }
+        public void Trig()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BacktoGame();
+                Debug.Log("button pressed");
+            }
+        }
         
     }
 }

@@ -11,14 +11,17 @@ namespace Foolacy.Main
 
         public static PointSystem instance;
 
-        public int Points;
+        private int Points;
         public int Revcieved;
         private int Target = 10;
-        public bool HasReached;
 
         private float coin;
+
+        [HideInInspector]
         public float check;
 
+        [HideInInspector]
+        public bool HasReached;
 
         private void Awake()
         {
@@ -50,6 +53,7 @@ namespace Foolacy.Main
             coin = Revcieved;
             PointChecker();
             pointBar.SetSize(check);
+            //Reset();
             
         }
 
@@ -100,6 +104,19 @@ namespace Foolacy.Main
         public void SavePoints()
         {
             PointSystem.instance.Revcieved = Revcieved;
+        }
+
+        public void Reset()
+        {
+                Points = 0;
+                Revcieved = Points;
+                Debug.Log("Is reset");
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+
+            }
+
         }
     }
 }

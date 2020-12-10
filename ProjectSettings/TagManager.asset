@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PointController
+  - UI_Hud
+  - GameManager
   layers:
   - Default
   - TransparentFX

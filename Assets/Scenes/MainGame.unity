@@ -164,9 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232e9a0a100cb4a8cb4d534a63249f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GRead: {fileID: 0}
-  GLearn: {fileID: 0}
-  Point: 0
+  pointShow: {fileID: 0}
 --- !u!1 &119364985
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +584,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 921024078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee74fbd8c76df41d78810cb007ba4ec4, type: 3}
+  m_Script: {fileID: 11500000, guid: ac6c2bd87c4ad4a1891d61921b882a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &926877894

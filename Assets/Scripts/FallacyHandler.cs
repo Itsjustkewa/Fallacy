@@ -24,7 +24,7 @@ namespace Foolacy.Main
         private PointSystem marks;
 
         [SerializeField]
-        private SceneManagerScript sceneManager;
+        //private SceneManagerScript sceneManager;
 
         private int Points;
         

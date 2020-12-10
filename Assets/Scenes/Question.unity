@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 738275352}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   - FallacyType: Hate School, but need Certificate?
     isCorrect: 1
   marks: {fileID: 738275354}
-  sceneManager: {fileID: 1414937263}
+  Points: 0
   fallacyText: {fileID: 102559838}
   breathTime: 1
 --- !u!114 &738275353
@@ -874,11 +874,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recieved: 0
-  checkPoint: 0
-  pointUI: 0
   collect: 0
-  gotten: 
-  Complete: {fileID: 738275354}
+  PointCanvas: {fileID: 0}
+  pointSystem: {fileID: 738275354}
 --- !u!114 &738275354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,7 +1042,7 @@ GameObject:
   - component: {fileID: 769592540}
   m_Layer: 5
   m_Name: PointCanvas
-  m_TagString: Untagged
+  m_TagString: UI_Hud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,9 +1433,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414937262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee74fbd8c76df41d78810cb007ba4ec4, type: 3}
+  m_Script: {fileID: 11500000, guid: ac6c2bd87c4ad4a1891d61921b882a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!4 &1414937264
 Transform:
   m_ObjectHideFlags: 0
@@ -1825,8 +1824,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: GoToMain
+      - m_Target: {fileID: 1414937263}
+        m_MethodName: EnterGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 738275353}
+        m_MethodName: BackToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
