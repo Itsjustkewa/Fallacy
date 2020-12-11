@@ -890,10 +890,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointBar: {fileID: 769592540}
-  Points: 0
   Revcieved: 0
-  HasReached: 0
   check: 0
+  HasReached: 0
 --- !u!4 &738275355
 Transform:
   m_ObjectHideFlags: 0
@@ -1436,7 +1435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6c2bd87c4ad4a1891d61921b882a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
 --- !u!4 &1414937264
 Transform:
   m_ObjectHideFlags: 0

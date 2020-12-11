@@ -10,7 +10,7 @@ namespace Foolacy.Main
     {
         public static SceneManagerScript instance;
 
-        public GameObject gameManager;
+        //public GameObject gameManager;
         private int SceneToLoad;
 
         // Start is called before the first frame update
