@@ -43,16 +43,16 @@ namespace Foolacy.Main
 
         private void Update()
         {
-            Trig();
+            
 
         }
 
-        public void PointCheck()
-        {
-            //gotten.Add(recieved);
-            recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
-            collect = recieved;
-        }
+        //public void PointCheck()
+        //{
+        //    //gotten.Add(recieved);
+        //    //recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
+        //    //collect = recieved;
+        //}
 
         public void BackToMain()
         {
@@ -72,14 +72,14 @@ namespace Foolacy.Main
                 return;
             }
         }
-        public void Trig()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                BacktoGame();
-                Debug.Log("button pressed");
-            }
-        }
+        //public void Trig()
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        BacktoGame();
+        //        Debug.Log("button pressed");
+        //    }
+        //}
         
     }
 }

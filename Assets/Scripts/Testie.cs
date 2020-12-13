@@ -5,22 +5,25 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Foolacy.Main { 
-
-    public class Testie : MonoBehaviour
+[System.Serializable]
+public class Testie
+{
+    public string fallacyName;
+    public enum fallacyType
     {
-
-        [SerializeField] PointUI pointShow;
-
-
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            pointShow.SetSize(.3f);
-        }
-
-       
+        adhominem,
+        appealToAuthority,
+        blackOrWhite,
+        hastyGeneralization,
+        slipperySlope,
+        correlationCausation,
+        anecdotalEvidence,
+        loadedQuestion,
+        poisoningTheWell,
+        appealToEmotions
     }
-        
+    public fallacyType fallacies;
+    public string fallacyAttribute;
 }
+   
+        
