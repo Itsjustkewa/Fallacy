@@ -20,12 +20,15 @@ namespace Foolacy.Main
         private Testie lure;
         private int score;
 
+        private List<Bug> options = new List<Bug>();
+
         [Header("Settings")]
         
         [SerializeField]private PointSystem tally;
         [SerializeField]private Text QuestionText;
         [SerializeField]private Text option1;
         [SerializeField]private Text option2;
+        [SerializeField]private List<int> answerOrder = new List<int>(new int[] { 1, 2 });
 
         private void Start()
         {
@@ -56,6 +59,7 @@ namespace Foolacy.Main
             currentQuiz = unansweredtest[randomBugIndex];
             QuestionText.text = currentQuiz.Questions;
             option1.text = currentQuiz.Options;
+            //option1.text = answerOrder.ToString():
 
         }
         public void Trap()
@@ -73,6 +77,8 @@ namespace Foolacy.Main
             yield return new WaitForSeconds(1);
             RunSim();
             Trap();
+            Shuffle(answerOrder);
+            
         }
 
         public void Correct()
@@ -121,12 +127,14 @@ namespace Foolacy.Main
                     break;
 
             }
+            AnswerHandler(answerOrder[1]);
             StartCoroutine(NeHex());
         }
         public void Wrong()
         {
             tally.RemovePoints(score);
             StartCoroutine(NeHex());
+            
         }
 
         public void control()
@@ -137,9 +145,27 @@ namespace Foolacy.Main
             }
         }
 
-        public void Modrator()
+        public void AnswerHandler(int answer)
         {
-            if(currentQuiz.)
+            if(answer == 1)
+            {
+                print("rush");
+            }
+        }
+
+        //created the shuffle funtion thanks to stackoverflow.com/questions/273313/randomize-a-listt-in-c-sharp
+        static readonly System.Random rng = new System.Random();
+        public static void Shuffle<X>(IList<X> list)
+        {
+            int n = list.Count;
+            while(n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                X value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
         }
     }
 }

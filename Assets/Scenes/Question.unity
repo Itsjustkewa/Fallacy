@@ -381,7 +381,7 @@ MonoBehaviour:
     fallacyAttribute: This occurs when someone applies the testimony of an authority
       in order to warrant their conclusion in an argument, however, the authority
       appealed to may not be an expert in the area of discussion
-  - fallacyName: 'Black or White '
+  - fallacyName: 'Black Or White '
     fallacies: 2
     fallacyAttribute: This fallacy occurs when one gives alternatives in an argument
       on a logically disjunctive premise, other alternatives are omitted
@@ -418,6 +418,7 @@ MonoBehaviour:
       at that face!... Would anyone vote for that? Can you imagine that, the face
       of our next president?!... I mean, she''s a woman, and I''m not s''posedta
       say bad things, but really, folks, come on. Are we serious?" '
+    Options: Ad Hominem
     type: 0
   - Questions: "President George W. Bush addressed the U.S. Congress and the Nation
       after the 11th of September attack. George W. Bush does not intend to deal
@@ -425,12 +426,14 @@ MonoBehaviour:
       will face consequences: \u201CAnd we will pursue nations that provide aid or
       safe haven to terrorism. Every nation in every region now has a decision to
       make: Either you are with us, or you are with the terrorists\u201D "
+    Options: Black Or White
     type: 2
   - Questions: "At a New Hampshire rally, Trump promised to kick all Syrian refugees
       (most of them are Muslim) out of the country, because they may be a part of
       the secret army. \u201CThey could be ISIS, I don't know. This could be one
       of the great tactical ploys of all time. A 200,000-man army, maybe\u2026 This
       could make the Trojan horse look like peanuts.\u201D"
+    Options: Hasty Generalization
     type: 3
   - Questions: "President Donald Trump was defending white nationalists who were
       protesting (to remove a statue of a Confederate) in Charlottesville. Trump
@@ -438,6 +441,7 @@ MonoBehaviour:
       coming down, I wonder: Is it George Washington next week, and is it Thomas
       Jefferson the week after? You know, you really do have to ask yourself \u2014
       where does it stop?\u201D"
+    Options: Slippery Slope
     type: 4
   - Questions: "Martin Luther King, who advocated for racial equality, made a speech
       in 1963, in Washington for Jobs and Freedom. During that speech he said: \u201CI
@@ -446,6 +450,7 @@ MonoBehaviour:
       transformed into an oasis of freedom and justice. I have a dream that my four
       little children will one day live in a nation where they will not be judged
       by the color of their skin but by the content of their character.\u201D"
+    Options: Appeal To Emotions
     type: 9
   - Questions: "Jeff Jeans who was a Republican and worked for Regan\u2019s and Bush\u2019s
       campaign was opposed to the Affordable Care Act, he told the House Speaker,
@@ -456,6 +461,7 @@ MonoBehaviour:
       we offered three times the cost of my treatments, which was rejected, they
       required an insurance card. Thanks to the Affordable Care Act, I am standing
       here today alive\u2026\u201D"
+    Options: Appeal To Emotions
     type: 9
   - Questions: "Donald Trump\u2019s campaign ad in 2016, showed how the United States
       of America would look like, if Hillary Clinton would be the president of the
@@ -463,12 +469,14 @@ MonoBehaviour:
       stays rigged against Americans, Syrian refugees flood in, illegal immigrants
       convicted of committing crime, get to stay, collecting social security benefits,
       skipping the line. Our border open, it\u2019s more of the same, but worse\u2026\u201D "
+    Options: Slippery Slope
     type: 4
   - Questions: "During presidential debate, Donald Trump, who is pro-life, said in
       response to Hillary\u2019s pro-choice campaign that \u201CBased on what she\u2019s
       saying and based on where she\u2019s going and where she\u2019s been, you can
       take the baby and rip the baby out of the womb in the ninth month. On the final
       day! And that\u2019s not acceptable.\u201D"
+    Options: Hasty Generalization
     type: 3
   - Questions: "Donald Trump\u2019s speech regarding the border wall: \u201C...They
       don\u2019t build walls because they hate the people on the outside, but because
@@ -478,6 +486,7 @@ MonoBehaviour:
       murdered in cold blood by an illegal alien, who just came across the border\u2026In
       California, an Air Force veteran was raped, murdered, and beaten to death with
       a hammer by an illegal alien with a long criminal history...\u201D"
+    Options: Black Or White
     type: 2
   - Questions: "Just in, Hillary Clinton exposes Donald Trump, calls him a racist
       and provides facts: ...He [TRUMP] has really started his political activity
@@ -488,15 +497,13 @@ MonoBehaviour:
       the Justice Department for racial discrimination because he would not rent
       apartments in one of his developments to African-Americans\u2026 So he has
       a long record of engaging in racist behavior\u2026\u201D"
+    Options: Ad Hominem
     type: 0
-  faltype:
-    fallacyName: bottoie
-    fallacies: 0
-    fallacyAttribute: 
   tally: {fileID: 90828771}
   QuestionText: {fileID: 980343048}
   option1: {fileID: 1115038159}
-  option2: {fileID: 0}
+  option2: {fileID: 1781628222}
+  answerOrder: 0100000002000000
 --- !u!4 &90828770
 Transform:
   m_ObjectHideFlags: 0
@@ -825,7 +832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.7, y: -228.4}
+  m_AnchoredPosition: {x: 3.7, y: -372}
   m_SizeDelta: {x: 657.4571, y: 114.31485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397731075
@@ -848,10 +855,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -870,7 +877,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397731076}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 90828769}
+        m_MethodName: Correct
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397731076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: -451}
+  m_AnchoredPosition: {x: 343, y: 733}
   m_SizeDelta: {x: 222, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444108387
@@ -967,7 +985,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9811321, g: 0.8288395, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1376,6 +1394,7 @@ RectTransform:
   - {fileID: 1677996904}
   - {fileID: 444108386}
   - {fileID: 397731074}
+  - {fileID: 737550508}
   m_Father: {fileID: 102370023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1444,6 +1463,136 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &737550507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737550508}
+  - component: {fileID: 737550511}
+  - component: {fileID: 737550510}
+  - component: {fileID: 737550509}
+  m_Layer: 0
+  m_Name: Option2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &737550508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737550507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1781628221}
+  m_Father: {fileID: 692186580}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.7, y: -540.6}
+  m_SizeDelta: {x: 657.4571, y: 114.31485}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &737550509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737550507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.6603774, g: 0.63000625, b: 0.6198825, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 737550510}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 90828769}
+        m_MethodName: Wrong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &737550510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737550507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &737550511
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737550507}
+  m_CullTransparentMesh: 0
 --- !u!1 &738275351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,8 +2064,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 2.7001953, y: 113.9}
-  m_SizeDelta: {x: -118.522095, y: 521.1306}
+  m_AnchoredPosition: {x: -1, y: 99.8}
+  m_SizeDelta: {x: -61.96161, y: 717.69006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980343048
 MonoBehaviour:
@@ -1941,7 +2090,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 63
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 63
     m_Alignment: 4
@@ -2021,7 +2170,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 73
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 9
     m_MaxSize: 83
     m_Alignment: 4
@@ -2430,7 +2579,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 68
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 71
     m_Alignment: 1
@@ -2439,7 +2588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Is there a fallacy?
+  m_Text: Which Fallacy is Correct?
 --- !u!222 &1501991485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3073,6 +3222,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767910975}
+  m_CullTransparentMesh: 0
+--- !u!1 &1781628220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781628221}
+  - component: {fileID: 1781628223}
+  - component: {fileID: 1781628222}
+  m_Layer: 0
+  m_Name: Option2[Button]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1781628221
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781628220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 737550508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1781628222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781628220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 73
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 9
+    m_MaxSize: 83
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Button
+--- !u!222 &1781628223
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781628220}
   m_CullTransparentMesh: 0
 --- !u!1 &1813684767
 GameObject:
