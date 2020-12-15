@@ -418,31 +418,31 @@ MonoBehaviour:
       at that face!... Would anyone vote for that? Can you imagine that, the face
       of our next president?!... I mean, she''s a woman, and I''m not s''posedta
       say bad things, but really, folks, come on. Are we serious?" '
-    Options: Ad Hominem
-    type: 0
+    Options: 
+    correct: 0
   - Questions: "President George W. Bush addressed the U.S. Congress and the Nation
       after the 11th of September attack. George W. Bush does not intend to deal
       with the terrorist and proclaimed that every nation that supports terrorists
       will face consequences: \u201CAnd we will pursue nations that provide aid or
       safe haven to terrorism. Every nation in every region now has a decision to
       make: Either you are with us, or you are with the terrorists\u201D "
-    Options: Black Or White
-    type: 2
+    Options: 
+    correct: 0
   - Questions: "At a New Hampshire rally, Trump promised to kick all Syrian refugees
       (most of them are Muslim) out of the country, because they may be a part of
       the secret army. \u201CThey could be ISIS, I don't know. This could be one
       of the great tactical ploys of all time. A 200,000-man army, maybe\u2026 This
       could make the Trojan horse look like peanuts.\u201D"
-    Options: Hasty Generalization
-    type: 3
+    Options: 
+    correct: 0
   - Questions: "President Donald Trump was defending white nationalists who were
       protesting (to remove a statue of a Confederate) in Charlottesville. Trump
       said: \"So this week it's Robert E. Lee\u2026 I notice that Stonewall Jackson's
       coming down, I wonder: Is it George Washington next week, and is it Thomas
       Jefferson the week after? You know, you really do have to ask yourself \u2014
       where does it stop?\u201D"
-    Options: Slippery Slope
-    type: 4
+    Options: 
+    correct: 0
   - Questions: "Martin Luther King, who advocated for racial equality, made a speech
       in 1963, in Washington for Jobs and Freedom. During that speech he said: \u201CI
       have a dream that one day even the state of Mississippi, a state sweltering
@@ -450,8 +450,8 @@ MonoBehaviour:
       transformed into an oasis of freedom and justice. I have a dream that my four
       little children will one day live in a nation where they will not be judged
       by the color of their skin but by the content of their character.\u201D"
-    Options: Appeal To Emotions
-    type: 9
+    Options: 
+    correct: 0
   - Questions: "Jeff Jeans who was a Republican and worked for Regan\u2019s and Bush\u2019s
       campaign was opposed to the Affordable Care Act, he told the House Speaker,
       Paul Ryan, that if not for Barack Obama\u2019s affordable care act, he would
@@ -461,23 +461,23 @@ MonoBehaviour:
       we offered three times the cost of my treatments, which was rejected, they
       required an insurance card. Thanks to the Affordable Care Act, I am standing
       here today alive\u2026\u201D"
-    Options: Appeal To Emotions
-    type: 9
+    Options: 
+    correct: 0
   - Questions: "Donald Trump\u2019s campaign ad in 2016, showed how the United States
       of America would look like, if Hillary Clinton would be the president of the
       United States of America. \u201CIn Hillary Clinton\u2019s America, the system
       stays rigged against Americans, Syrian refugees flood in, illegal immigrants
       convicted of committing crime, get to stay, collecting social security benefits,
       skipping the line. Our border open, it\u2019s more of the same, but worse\u2026\u201D "
-    Options: Slippery Slope
-    type: 4
+    Options: 
+    correct: 0
   - Questions: "During presidential debate, Donald Trump, who is pro-life, said in
       response to Hillary\u2019s pro-choice campaign that \u201CBased on what she\u2019s
       saying and based on where she\u2019s going and where she\u2019s been, you can
       take the baby and rip the baby out of the womb in the ninth month. On the final
       day! And that\u2019s not acceptable.\u201D"
-    Options: Hasty Generalization
-    type: 3
+    Options: 
+    correct: 0
   - Questions: "Donald Trump\u2019s speech regarding the border wall: \u201C...They
       don\u2019t build walls because they hate the people on the outside, but because
       they love the people on the inside... The only thing that is immoral is the
@@ -486,8 +486,8 @@ MonoBehaviour:
       murdered in cold blood by an illegal alien, who just came across the border\u2026In
       California, an Air Force veteran was raped, murdered, and beaten to death with
       a hammer by an illegal alien with a long criminal history...\u201D"
-    Options: Black Or White
-    type: 2
+    Options: 
+    correct: 0
   - Questions: "Just in, Hillary Clinton exposes Donald Trump, calls him a racist
       and provides facts: ...He [TRUMP] has really started his political activity
       based on this racist lie that our first black president was not an American
@@ -497,13 +497,14 @@ MonoBehaviour:
       the Justice Department for racial discrimination because he would not rent
       apartments in one of his developments to African-Americans\u2026 So he has
       a long record of engaging in racist behavior\u2026\u201D"
-    Options: Ad Hominem
-    type: 0
+    Options: 
+    correct: 0
   tally: {fileID: 90828771}
   QuestionText: {fileID: 980343048}
   option1: {fileID: 1115038159}
   option2: {fileID: 1781628222}
-  answerOrder: 0100000002000000
+  answerlist: 0100000002000000020000000200000002000000
+  answerOrder: []
 --- !u!4 &90828770
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Testie
 {
     public string fallacyName;
-    public enum fallacyType
+    public enum FallacyType
     {
         adhominem,
         appealToAuthority,
@@ -22,7 +22,8 @@ public class Testie
         poisoningTheWell,
         appealToEmotions
     }
-    public fallacyType fallacies;
+    
+    public FallacyType fallacies;
     public string fallacyAttribute;
 }
    

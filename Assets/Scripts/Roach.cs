@@ -20,7 +20,7 @@ namespace Foolacy.Main
         private Testie lure;
         private int score;
 
-        private List<Bug> options = new List<Bug>();
+        //private List<Bug> options = new List<Bug>();
 
         [Header("Settings")]
         
@@ -28,7 +28,12 @@ namespace Foolacy.Main
         [SerializeField]private Text QuestionText;
         [SerializeField]private Text option1;
         [SerializeField]private Text option2;
-        [SerializeField]private List<int> answerOrder = new List<int>(new int[] { 1, 2 });
+
+        [Header("Answer")]
+        //[SerializeField]private List<int> answerlist = new List<int>(new int[] { 1, 2,});
+        [SerializeField] private List<int> answerlist = new List<int>(new int[] {1, 2, 3, 4,});
+
+        [SerializeField]private List<AnswerHandler> answerOrder = new List<AnswerHandler>();
 
         private void Start()
         {
@@ -58,7 +63,7 @@ namespace Foolacy.Main
             int randomBugIndex = Random.Range(0, unansweredtest.Count);
             currentQuiz = unansweredtest[randomBugIndex];
             QuestionText.text = currentQuiz.Questions;
-            option1.text = currentQuiz.Options;
+            //option1.text = currentQuiz.Options;
             //option1.text = answerOrder.ToString():
 
         }
@@ -77,47 +82,47 @@ namespace Foolacy.Main
             yield return new WaitForSeconds(1);
             RunSim();
             Trap();
-            Shuffle(answerOrder);
+            Shuffle(answerlist);
             
         }
 
         public void Correct()
         {
-            switch (currentQuiz.type)
+            switch (currentQuiz.correct)
             {
-                case Testie.fallacyType.adhominem:
+                case Testie.FallacyType.adhominem:
                     //print("jop");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.anecdotalEvidence:
+                case Testie.FallacyType.anecdotalEvidence:
                     //print("none");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.appealToAuthority:
+                case Testie.FallacyType.appealToAuthority:
                     //print("cheese");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.blackOrWhite:
+                case Testie.FallacyType.blackOrWhite:
                     //print("reach");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.correlationCausation:
+                case Testie.FallacyType.correlationCausation:
                     //print("touch");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.hastyGeneralization:
+                case Testie.FallacyType.hastyGeneralization:
                     //print("solad");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.loadedQuestion:
+                case Testie.FallacyType.loadedQuestion:
                     //print("butt");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.poisoningTheWell:
+                case Testie.FallacyType.poisoningTheWell:
                     //print("lol");
                     tally.AddPoints(score);
                     break;
-                case Testie.fallacyType.slipperySlope:
+                case Testie.FallacyType.slipperySlope:
                     //print("curse");
                     tally.AddPoints(score);
                     break;
@@ -127,7 +132,8 @@ namespace Foolacy.Main
                     break;
 
             }
-            AnswerHandler(answerOrder[1]);
+            //AnswerHandler(answerOrder[1]);
+            AnswerHandler(answerlist[1]);
             StartCoroutine(NeHex());
         }
         public void Wrong()
@@ -139,7 +145,7 @@ namespace Foolacy.Main
 
         public void control()
         {
-           if(currentQuiz.type == lure.fallacies)
+           if(currentQuiz.correct == lure.fallacies)
             {
                 Trap();
             }
@@ -155,6 +161,7 @@ namespace Foolacy.Main
 
         //created the shuffle funtion thanks to stackoverflow.com/questions/273313/randomize-a-listt-in-c-sharp
         static readonly System.Random rng = new System.Random();
+
         public static void Shuffle<X>(IList<X> list)
         {
             int n = list.Count;
