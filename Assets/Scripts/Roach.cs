@@ -5,6 +5,8 @@ using UnityEngine;
 //using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Linq;
+using System;
+
 
 namespace Foolacy.Main
 { 
@@ -16,7 +18,7 @@ namespace Foolacy.Main
         public Bug[] quiz;
         private List<Bug> unansweredtest;
         private List<Testie> lureOpts;
-        private Bug currentQuiz;
+        private Bug currentQuiz= new Bug();
         private Testie lure;
         private int score;
 
@@ -30,10 +32,14 @@ namespace Foolacy.Main
         [SerializeField]private Text option2;
 
         [Header("Answer")]
-        //[SerializeField]private List<int> answerlist = new List<int>(new int[] { 1, 2,});
-        [SerializeField] private List<int> answerlist = new List<int>(new int[] {1, 2, 3, 4,});
+        public int optionCount;
 
-        [SerializeField]private List<AnswerHandler> answerOrder = new List<AnswerHandler>();
+
+        private void Awake()
+        {
+           
+        }
+
 
         private void Start()
         {
@@ -41,18 +47,15 @@ namespace Foolacy.Main
             {
                 unansweredtest = quiz.ToList<Bug>();
             }
-            if(lureOpts == null || lureOpts.Count == 0)
-            {
-                lureOpts = testie.ToList<Testie>();
-            }
             RunSim();
-            Trap();
+            //Correct();
         }
 
         private void Update()
         {
             control();
-        }
+            
+        }       
 
         private void RunSim()
         {
@@ -60,19 +63,70 @@ namespace Foolacy.Main
             //{
             //    unansweredtest.Add(quiz);
             //}
-            int randomBugIndex = Random.Range(0, unansweredtest.Count);
+
+            int randomBugIndex = UnityEngine.Random.Range(0, unansweredtest.Count);
             currentQuiz = unansweredtest[randomBugIndex];
             QuestionText.text = currentQuiz.Questions;
-            //option1.text = currentQuiz.Options;
-            //option1.text = answerOrder.ToString():
 
+
+
+            
+
+            List<Testie.FallacyType> tempList = new List<Testie.FallacyType>(new Testie.FallacyType[9]);
+            tempList = currentQuiz.Options;
+            //currentQuiz.OptGen(optionCount);
+
+            int currentindex;
+            currentindex = currentQuiz.Options.Capacity;
+
+            var fristOpt = currentQuiz.Options[0];
+            var secondOpt = currentQuiz.Options[1];
+
+
+            //to change the display of the button
+            string Optdisplay = fristOpt.ToString();
+            option1.text = Optdisplay;
+
+            string Optdisplya2 = secondOpt.ToString();
+            option2.text = Optdisplya2;
+            Correct();
+
+            Shuffle(currentQuiz.Options);
+
+            //print(fristOpt);
+            //print(secondOpt);
+
+            //print(currentQuiz.Options.Capacity.ToString());
+            
         }
-        public void Trap()
-        {
-            int randomTestieIndex = Random.Range(0,lureOpts.Count);
-            lure = lureOpts[randomTestieIndex];
-            option2.text = lure.fallacyName;
 
+
+
+        public void CorrectlistOps()
+        {
+            if(currentQuiz.correct == currentQuiz.Options[0])
+            {
+                print("dirt");
+            }
+            if(currentQuiz.correct == currentQuiz.Options[1])
+            {
+                print("shoe");
+            }
+            if (currentQuiz.correct == currentQuiz.Options[2])
+            {
+                print("mudd");
+            }
+
+            //var check = Enum.GetValues(typeof(Testie.FallacyType));
+            //currentQuiz.correct = check;
+
+            //int 
+            //switch (currentQuiz.correct)
+            //{
+            //    case check.GetValue():
+            //        print("Boobs");
+            //        break;
+            //}
         }
 
         IEnumerator NeHex()
@@ -81,61 +135,134 @@ namespace Foolacy.Main
 
             yield return new WaitForSeconds(1);
             RunSim();
-            Trap();
-            Shuffle(answerlist);
+            //CorrectlistOps();
+            //Trap();
+            //Correct();
             
         }
 
         public void Correct()
         {
-            switch (currentQuiz.correct)
+            
+            switch (currentQuiz.Options[0])
             {
                 case Testie.FallacyType.adhominem:
-                    //print("jop");
-                    tally.AddPoints(score);
+                    option1.text = ("Ad Hominem");
                     break;
                 case Testie.FallacyType.anecdotalEvidence:
-                    //print("none");
-                    tally.AddPoints(score);
+                    option1.text = ("Ancedotal Evidence");
                     break;
                 case Testie.FallacyType.appealToAuthority:
-                    //print("cheese");
-                    tally.AddPoints(score);
+                    option1.text = ("Appeal To Authority");
                     break;
                 case Testie.FallacyType.blackOrWhite:
-                    //print("reach");
-                    tally.AddPoints(score);
+                    option1.text = ("Black Or White");
                     break;
                 case Testie.FallacyType.correlationCausation:
-                    //print("touch");
-                    tally.AddPoints(score);
+                    option1.text = ("Coreelation / Causation");
                     break;
                 case Testie.FallacyType.hastyGeneralization:
-                    //print("solad");
-                    tally.AddPoints(score);
+                    option1.text = ("Hasty Generalization");
                     break;
                 case Testie.FallacyType.loadedQuestion:
-                    //print("butt");
-                    tally.AddPoints(score);
+                    option1.text =("Loaded Question");
                     break;
                 case Testie.FallacyType.poisoningTheWell:
-                    //print("lol");
-                    tally.AddPoints(score);
+                    option1.text = ("Poisoning The Well");
                     break;
                 case Testie.FallacyType.slipperySlope:
-                    //print("curse");
-                    tally.AddPoints(score);
+                    option1.text = ("Slippery Slope");
+                    break;
+                case Testie.FallacyType.appealToEmotions:
+                    option1.text = ("Appeal To Emotions");
                     break;
                 default:
                     print("No credit today");
-                    tally.RemovePoints(score);
+                    //tally.RemovePoints(score);
                     break;
 
             }
-            //AnswerHandler(answerOrder[1]);
-            AnswerHandler(answerlist[1]);
-            StartCoroutine(NeHex());
+                
+
+            switch (currentQuiz.Options[1])
+            {
+                case Testie.FallacyType.adhominem:
+                    option2.text = ("Ad Hominem");
+                    break;
+                case Testie.FallacyType.anecdotalEvidence:
+                    option2.text = ("Ancedotal Evidence");
+                    break;
+                case Testie.FallacyType.appealToAuthority:
+                    option2.text = ("Appeal To Authority");
+                    break;
+                case Testie.FallacyType.blackOrWhite:
+                    option2.text = ("Black Or White");
+                    break;
+                case Testie.FallacyType.correlationCausation:
+                    option2.text = ("Coreelation / Causation");
+                    break;
+                case Testie.FallacyType.hastyGeneralization:
+                    option2.text = ("Hasty Generalization");
+                    break;
+                case Testie.FallacyType.loadedQuestion:
+                    option2.text = ("Loaded Question");
+                    break;
+                case Testie.FallacyType.poisoningTheWell:
+                    option2.text = ("Poisoning The Well");
+                    break;
+                case Testie.FallacyType.slipperySlope:
+                    option2.text = ("Slippery Slope");
+                    break;
+                case Testie.FallacyType.appealToEmotions:
+                    option2.text = ("Appeal To Emotions");
+                    break;
+                default:
+                    print("No credit today");
+                    //tally.RemovePoints(score);
+                    break;
+
+            }
+
+            //switch (currentQuiz.Options[2])
+            //{
+            //    case Testie.FallacyType.adhominem:
+            //        option1.text = ("Ad Hominem");
+            //        break;
+            //    case Testie.FallacyType.anecdotalEvidence:
+            //        option1.text = ("Ancedotal Evidence");
+            //        break;
+            //    case Testie.FallacyType.appealToAuthority:
+            //        option1.text = ("Appeal To Authority");
+            //        break;
+            //    case Testie.FallacyType.blackOrWhite:
+            //        option1.text = ("Black Or White");
+            //        break;
+            //    case Testie.FallacyType.correlationCausation:
+            //        option1.text = ("Coreelation / Causation");
+            //        break;
+            //    case Testie.FallacyType.hastyGeneralization:
+            //        option1.text = ("Hasty Generalization");
+            //        break;
+            //    case Testie.FallacyType.loadedQuestion:
+            //        option1.text = ("Loaded Question");
+            //        break;
+            //    case Testie.FallacyType.poisoningTheWell:
+            //        option1.text = ("Poisoning The Well");
+            //        break;
+            //    case Testie.FallacyType.slipperySlope:
+            //        option1.text = ("Slippery Slope");
+            //        break;
+            //    case Testie.FallacyType.appealToEmotions:
+            //        option1.text = ("Appeal To Emotions");
+            //        break;
+            //    default:
+            //        print("No credit today");
+            //        //tally.RemovePoints(score);
+            //        break;
+
+            //}
         }
+
         public void Wrong()
         {
             tally.RemovePoints(score);
@@ -145,9 +272,10 @@ namespace Foolacy.Main
 
         public void control()
         {
-           if(currentQuiz.correct == lure.fallacies)
+            if (Input.GetKeyDown(KeyCode.N))
             {
-                Trap();
+                StartCoroutine(NeHex());
+                //print("Next Question");
             }
         }
 
