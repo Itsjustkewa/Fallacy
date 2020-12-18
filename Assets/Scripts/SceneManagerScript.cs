@@ -9,22 +9,8 @@ namespace Foolacy.Main
     public class SceneManagerScript : MonoBehaviour
     {
         public static SceneManagerScript instance;
-
-        //public GameObject gameManager;
         private int SceneToLoad;
 
-        // Start is called before the first frame update
-        void Awake()
-        {
-            //gameManager = ;
-            //Application.LoadLevel(0);
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
 
         public void EnterGame()
         {
@@ -38,10 +24,10 @@ namespace Foolacy.Main
             SceneManager.LoadScene(2);
         }
 
-        public void StartQuestion()
+        public void GoHome()
         {
-            //gameManager.BacktoGame();
-            SceneManager.LoadScene(2);
+            
+            SceneManager.LoadScene(0);
             
         }
 

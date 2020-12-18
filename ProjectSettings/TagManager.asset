@@ -7,6 +7,7 @@ TagManager:
   - PointController
   - UI_Hud
   - GameManager
+  - Questions
   layers:
   - Default
   - TransparentFX

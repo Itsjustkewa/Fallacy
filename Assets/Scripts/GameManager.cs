@@ -9,12 +9,13 @@ namespace Foolacy.Main
     {
         public static GameManager instance;
 
-        [HideInInspector]public int recieved;
-        [HideInInspector]public int collect;
 
+        [Header("Canavas")]
         public GameObject PointCanvas;
+        public GameObject testQuestion;
+        public GameObject winCanvas;
 
-        //public Roach QuestionCanvas;
+        
 
         public PointSystem pointSystem;
 
@@ -30,10 +31,16 @@ namespace Foolacy.Main
                 return;
             }
 
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
 
             PointCanvas = GameObject.FindGameObjectWithTag("UI_Hud");
 
+        }
+
+        public void Start()
+        {
+            winCanvas.SetActive(false);
+            
         }
 
         public void IsComplete()
@@ -43,16 +50,16 @@ namespace Foolacy.Main
 
         private void Update()
         {
-            
+            if(pointSystem.HasReached)
+            {
+                winCanvas.SetActive(true);
+                PointCanvas.SetActive(false);
+                testQuestion.SetActive(false);
+                return;
+            }
 
         }
 
-        //public void PointCheck()
-        //{
-        //    //gotten.Add(recieved);
-        //    //recieved = GameObject.FindGameObjectWithTag("PointController").GetComponent<Roach>().currentPoint;
-        //    //collect = recieved;
-        //}
 
         public void BackToMain()
         {
@@ -72,14 +79,6 @@ namespace Foolacy.Main
                 return;
             }
         }
-        //public void Trig()
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Space))
-        //    {
-        //        BacktoGame();
-        //        Debug.Log("button pressed");
-        //    }
-        //}
         
     }
 }
